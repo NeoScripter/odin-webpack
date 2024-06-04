@@ -42,7 +42,7 @@ body {
 
 .wrapper {
     border: 1px solid var(--yellow-clr);
-    width: 800px;
+    max-width: 800px;
     border-radius: 0.5em;
 }
 .nav-btn {
@@ -97,5 +97,39 @@ header {
 
 .banner img {
     border-radius: 0.5em;
+    object-fit: cover;
+    object-position: center;
+}
 
+.grid-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+}
+
+.grid-element {
+    padding: 1em;
+    border: 1px solid var(--yellow-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 0.8em;
+}
+
+.grid-element h2 {
+    font-family: 'Bold';
+    font-size: 1.5rem;
+}
+
+.grid-element p {
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .primary-nav {
+        flex-direction: column;
+    }
 }
